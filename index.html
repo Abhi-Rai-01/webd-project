@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/index.css">
+  <style type="text/css">
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    /*--------- css style for landscape devices ------------*/
+
+    @media screen and (orientation: landscape) {
+      body {
+        background: url(/public/image/best-bookshelf.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 0px -12px;
+      }
+      .logo{
+        height: 50px;
+        width: 90px;
+      }
+      .mobile{
+        display: none;
+      }
+
+      .greetings {
+        background-color: rgba(0, 0, 0, 0.7);
+        height: 55vh;
+        margin: 100px 150px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer{
+        margin: 0px -12px -16px -12px ;
+        text-align: center;
+        font-size: 25px;
+      }
+    }
+
+
+    /*--------- css style for portrait devices ------------*/
+
+    @media screen and (orientation: portrait) {
+      body {
+        background: url(/public/image/mobilebookshelf.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+      }
+
+      header {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 0px -12px;
+      }
+      .logo{
+        height: 40px;
+        width: 50px;
+      }
+      .desktop{
+        display: none;
+      }
+
+      .greetings {
+        background-color: rgba(0, 0, 0, 0.7);
+        margin: 100px 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      footer{
+        margin: 0px -12px -16px -12px ;
+        text-align: center;
+        font-size: 15px;
+      }
+    }
+  </style>
+</head>
+
+<body class="container-fluid">
+  <header class="p-3 text-white d-flex justify-content-between">
+    <div class="fs-3">
+      <img src="public/image/logo.png" class="logo">
+    </div>
+
+    <div class="desktop">
+      <!---------------- contact us and about us ---------->
+      <div class="p-1 info-desktop">
+        <!----------- modal button for contact infomation --------->
+        <button type="button" class="btn btn-outline-light me-3" data-bs-toggle="modal" data-bs-target="#Contact">Contact
+          Us</button>
+        <!------- contact information modal component code --------->
+        <div class="modal fade" id="Contact">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-black">
+                <p class="modal-title fs-3 text-white">Contact Details</p>
+              </div>
+              <div class="modal-body bg-black">
+                <ul>
+                  <li><b>Email:</b> support@123bookspot.com</li>
+                  <li><b>Phone no.:</b> +91-9305071683, +91-9450950869</li>
+                  <li><b>Address:</b> s, no 164, no 3368, Room 136 Block-A, Yello Living, Extension Road, Pattandur
+                    Agrahara, Whitefield, Bengaluru, Karnataka 560066</li>
+                </ul>
+              </div>
+              <div class="modal-footer bg-black">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        <!----------- modal button for about us infomation --------->
+        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#About">About
+          Us</button>
+        <!------- about us information modal component code --------->
+        <div class="modal fade" id="About">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-header bg-black">
+                <p class="modal-title fs-3 text-white">About Us</p>
+              </div>
+              <div class="modal-body bg-black">
+                <p class="about-us" style="text-align: justify;">
+                  Welcome to BookSpot – your go-to destination for book lovers! Whether you're searching for insightful
+                  reviews, honest feedback, or direct links to buy your next great read, we’ve got you covered.
+                </p>
+                <p>
+                  At BookSpot, we believe that every book holds a unique story beyond its pages. Our mission is to help
+                  readers 📖 discover amazing books across all genres through authentic reviews and recommendations. We
+                  aim to make book selection easier by providing valuable insights and curated buying links.
+                </p>
+                <p>
+                  ✨ Find your next favorite book with BookSpot – where great reads begin! ✨
+                </p>
+              </div>
+              <div class="modal-footer bg-black">
+                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile fs-2" id="mobileList">
+      <button type="button" class="btn btn-dark">
+        <span class="bi bi-list"></span>
+      </button>
+    </div>
+  </header>
+
+
+
+  <section class="greetings text-light">
+    <div class="p-5">
+      <h3 class="fs-1">📚 Welcome to BookSpot!</h3>
+      <p class="fs-5">
+        📖 Unlimited Books, Honest Reviews. <br>
+        🔥 Find your next great read today! <br>
+        Your next favorite read is just a click away. Explore reviews, get feedback, and find the perfect book for you.
+        👉 Start Exploring Now!
+      </p>
+      <a href="#" class="btn btn-primary" role="button">Click here to continue <span
+          class="bi bi-arrow-right"></span></a>
+    </div>
+  </section>
+
+
+
+  <section class="accordion-faqs mb-3">
+    <div class="accordion bg-black opacity-75" id="accordionExample">
+      <h2 class="bg-black text-white bg-opacity-75 p-2 border border-1 border-light">FAQs</h1>
+        <div class="accordion-item bg-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-black bg-opacity-75 collapsed fw-bold text-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseOne">
+              What is BookSpot?
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body text-white">
+              BookSpot is a platform for book lovers to discover reviews, feedback, and direct buying links for books
+              across all genres.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-black bg-opacity-75 collapsed fw-bold text-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+              Where can I buy books listed on BookSpot?
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body text-white">
+              We provide trusted buying links from various online bookstores.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item bg-black">
+          <h2 class="accordion-header">
+            <button class="accordion-button bg-black bg-opacity-75 collapsed fw-bold text-white" type="button"
+              data-bs-toggle="collapse" data-bs-target="#collapseThree">
+              Does BookSpot sell books directly?
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body text-white">
+              No, we only provide links to reputable sellers.
+            </div>
+          </div>
+        </div>
+    </div>
+  </section>
+
+
+  <footer class="bg-black text-white bg-opacity-75 pt-4 pb-1">
+    <p>
+      © 2025 BookSpot. All Rights Reserved.
+    </p>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
+
+  <script type="text/javascript">
+
+  </script>
+</body>
+
+</html>
