@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/index.css">
   <style type="text/css">
     * {
@@ -15,7 +15,6 @@
     }
 
     /*--------- css style for landscape devices ------------*/
-
     @media screen and (orientation: landscape) {
       body {
         background: url(/public/image/best-bookshelf.jpg);
@@ -28,11 +27,13 @@
         background-color: rgba(0, 0, 0, 0.7);
         margin: 0px -12px;
       }
-      .logo{
+
+      .logo {
         height: 50px;
         width: 90px;
       }
-      .mobile{
+
+      .mobile {
         display: none;
       }
 
@@ -47,16 +48,14 @@
         align-items: center;
       }
 
-      footer{
-        margin: 0px -12px -16px -12px ;
+      footer {
+        margin: 0px -12px -16px -12px;
         text-align: center;
         font-size: 25px;
       }
     }
 
-
     /*--------- css style for portrait devices ------------*/
-
     @media screen and (orientation: portrait) {
       body {
         background: url(/public/image/mobilebookshelf.jpg);
@@ -69,11 +68,13 @@
         background-color: rgba(0, 0, 0, 0.7);
         margin: 0px -12px;
       }
-      .logo{
+
+      .logo {
         height: 40px;
         width: 50px;
       }
-      .desktop{
+
+      .desktop {
         display: none;
       }
 
@@ -87,8 +88,8 @@
         align-items: center;
       }
 
-      footer{
-        margin: 0px -12px -16px -12px ;
+      footer {
+        margin: 0px -12px -16px -12px;
         text-align: center;
         font-size: 15px;
       }
@@ -97,86 +98,49 @@
 </head>
 
 <body class="container-fluid">
+  <!-- this is a header section -->
   <header class="p-3 text-white d-flex justify-content-between">
     <div class="fs-3">
-      <img src="public/image/logo.png" class="logo">
+      <a href="http://127.0.0.1:5500/index.html"><img src="public/image/logo.png" class="logo"></a>
     </div>
 
-    <div class="desktop">
-      <!---------------- contact us and about us ---------->
-      <div class="p-1 info-desktop">
-        <!----------- modal button for contact infomation --------->
-        <button type="button" class="btn btn-outline-light me-3" data-bs-toggle="modal" data-bs-target="#Contact">Contact
-          Us</button>
-        <!------- contact information modal component code --------->
-        <div class="modal fade" id="Contact">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header bg-black">
-                <p class="modal-title fs-3 text-white">Contact Details</p>
-              </div>
-              <div class="modal-body bg-black">
-                <ul>
-                  <li><b>Email:</b> support@123bookspot.com</li>
-                  <li><b>Phone no.:</b> +91-9305071683, +91-9450950869</li>
-                  <li><b>Address:</b> s, no 164, no 3368, Room 136 Block-A, Yello Living, Extension Road, Pattandur
-                    Agrahara, Whitefield, Bengaluru, Karnataka 560066</li>
-                </ul>
-              </div>
-              <div class="modal-footer bg-black">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-  
-        <!----------- modal button for about us infomation --------->
-        <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#About">About
-          Us</button>
-        <!------- about us information modal component code --------->
-        <div class="modal fade" id="About">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header bg-black">
-                <p class="modal-title fs-3 text-white">About Us</p>
-              </div>
-              <div class="modal-body bg-black">
-                <p class="about-us" style="text-align: justify;">
-                  Welcome to BookSpot – your go-to destination for book lovers! Whether you're searching for insightful
-                  reviews, honest feedback, or direct links to buy your next great read, we’ve got you covered.
-                </p>
-                <p>
-                  At BookSpot, we believe that every book holds a unique story beyond its pages. Our mission is to help
-                  readers 📖 discover amazing books across all genres through authentic reviews and recommendations. We
-                  aim to make book selection easier by providing valuable insights and curated buying links.
-                </p>
-                <p>
-                  ✨ Find your next favorite book with BookSpot – where great reads begin! ✨
-                </p>
-              </div>
-              <div class="modal-footer bg-black">
-                <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
+    <!-- this section is for desktop view and in this section buttons are kept for modal -->
+    <div class="p-1 desktop">
+      <!-- modal button for contact infomation and modal component code is at the last of the body -->
+      <button type="button" class="btn btn-outline-light me-3" data-bs-toggle="modal" data-bs-target="#Contact">Contact
+        Us
+      </button>
+
+      <!-- modal button for about us infomation and modal component code is at the last of the body -->
+      <button type="button" class="btn btn-outline-light" data-bs-toggle="modal" data-bs-target="#About">About
+        Us
+      </button>
     </div>
 
+    <!-- this code is for mobile view which is for list in a dropdown form and inside dropdown how modal buttons are kept -->
     <div class="mobile fs-2 dropstart" id="mobileList">
       <button type="button" class="btn btn-dark" data-bs-toggle="dropdown">
         <span class="bi bi-list"></span>
       </button>
-      <ul class="dropdown-menu ">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      <ul class="dropdown-menu bg-black">
+        <li>
+          <!-- modal button for contact infomation and modal component code is at the last of the body -->
+          <button type="button" class="dropdown-item text-white" data-bs-toggle="modal" data-bs-target="#Contact">
+            Contact Us
+          </button>
+        </li>
+        <li>
+          <!-- modal button for about us infomation and modal component code is at the last of the body -->
+          <button type="button" class="dropdown-item text-white" data-bs-toggle="modal" data-bs-target="#About">
+            About Us
+          </button>
+        </li>
       </ul>
     </div>
   </header>
 
-
-
+  <!--------- code for welcome to bookspot section or greetings section ----------->
   <section class="greetings text-light">
     <div class="p-5">
       <h3 class="fs-1">📚 Welcome to BookSpot!</h3>
@@ -191,10 +155,9 @@
     </div>
   </section>
 
-
-
+  <!-- this section corresponds to the FAQs with accordion functionality -->
   <section class="accordion-faqs mb-3">
-    <div class="accordion bg-black opacity-75" id="accordionExample">
+    <div class="accordion bg-black opacity-75" id="faqs">
       <h2 class="bg-black text-white bg-opacity-75 p-2 border border-1 border-light">FAQs</h1>
         <div class="accordion-item bg-black">
           <h2 class="accordion-header">
@@ -203,7 +166,7 @@
               What is BookSpot?
             </button>
           </h2>
-          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#faqs">
             <div class="accordion-body text-white">
               BookSpot is a platform for book lovers to discover reviews, feedback, and direct buying links for books
               across all genres.
@@ -217,7 +180,7 @@
               Where can I buy books listed on BookSpot?
             </button>
           </h2>
-          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#faqs">
             <div class="accordion-body text-white">
               We provide trusted buying links from various online bookstores.
             </div>
@@ -230,7 +193,7 @@
               Does BookSpot sell books directly?
             </button>
           </h2>
-          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#faqs">
             <div class="accordion-body text-white">
               No, we only provide links to reputable sellers.
             </div>
@@ -239,19 +202,68 @@
     </div>
   </section>
 
-
+  <!-- this is for footer section -->
   <footer class="bg-black text-white bg-opacity-75 pt-4 pb-1">
     <p>
       © 2025 BookSpot. All Rights Reserved.
     </p>
   </footer>
 
-  <script src="node_modules/jquery/dist/jquery.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.js"></script>
 
-  <script type="text/javascript">
+  <!------- contact information modal component code --------->
+  <div class="modal fade" id="Contact">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-black">
+          <p class="modal-title fs-3 text-white">Contact Details</p>
+        </div>
+        <div class="modal-body bg-black">
+          <ul class="text-white">
+            <li><b>Email:</b> support@123bookspot.com</li><br>
+            <li><b>Phone no.:</b> +91-9305071683, +91-9450950869</li><br>
+            <li><b>Address:</b> s, no 164, no 3368, Room 136 Block-A, Yello Living, Extension Road, Pattandur
+              Agrahara, Whitefield, Bengaluru, Karnataka 560066</li>
+          </ul>
+        </div>
+        <div class="modal-footer bg-black">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  </script>
+  <!------- about us information modal component code --------->
+  <div class="modal fade" id="About">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-black">
+          <p class="modal-title fs-3 text-white">About Us</p>
+        </div>
+        <div class="modal-body bg-black text-white">
+          <p class="about-us" style="text-align: justify;">
+            Welcome to BookSpot – your go-to destination for book lovers! Whether you're searching for
+            insightful
+            reviews, honest feedback, or direct links to buy your next great read, we’ve got you covered.
+          </p>
+          <p>
+            At BookSpot, we believe that every book holds a unique story beyond its pages. Our mission is to
+            help
+            readers 📖 discover amazing books across all genres through authentic reviews and recommendations.
+            We
+            aim to make book selection easier by providing valuable insights and curated buying links.
+          </p>
+          <p>
+            ✨ Find your next favorite book with BookSpot – where great reads begin! ✨
+          </p>
+        </div>
+        <div class="modal-footer bg-black">
+          <button type="button" class="btn btn-dark" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
 </html>
